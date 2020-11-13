@@ -1,0 +1,31 @@
+@font-face {
+    font-family: Sahel;
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.woff') format('woff'),
+         url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.ttf') format('truetype');
+    font-weight: normal;
+}
+
+body {
+    background-image: url(/static/images/bg-dotted.jpg);
+}
+
+header {
+    padding-top: 30px;
+}
+
+.header-buttons-right {
+    margin-top: 45px;
+    margin-right: 30%;
+}
+
+.header-logo {  
+    float: right;
+    width: 120px;
+    height: 120px;
+}
+
+.sahel-font {
+    font-family: Sahel;
+}
