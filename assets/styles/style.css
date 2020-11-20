@@ -8,11 +8,38 @@
 }
 
 header {
+    background: rgb(171, 173, 173);
+}
+
+@media (max-width: 600px) {
+    .desktop-mode {
+        display: none;
+    }
+    .mobile-mode {
+        display: block;   
+    }
+}
+
+@media (min-width: 601px) {
+    .desktop-mode {
+        display: block;
+    }
+    .mobile-mode {
+        display: none;   
+    }
+}
+
+.header-flex-mobile {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.header-flex-desktop {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding-top: 30px;
-    background: rgb(171, 173, 173);
 }
 
 .header-items-right {
