@@ -7,74 +7,53 @@
     font-weight: normal;
 }
 
-header {
-    background: rgb(171, 173, 173);
+body {
+    direction: rtl;
 }
 
 @media (max-width: 600px) {
     .desktop-mode {
-        display: none;
-    }
-    .mobile-mode {
-        display: block;   
+        display: none !important;
     }
 }
 
 @media (min-width: 601px) {
-    .desktop-mode {
-        display: block;
-    }
     .mobile-mode {
-        display: none;   
+        display: none !important;
     }
 }
 
-.header-flex-mobile {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+header {
+    background-color: rgba(204, 217, 255);
 }
 
-.header-flex-desktop {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding-top: 30px;
-}
-
-.header-items-right {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end; 
-}
-
-.header-buttons-right {
-    margin-right: 300px;
-    margin-top: 10px;
-}
-
-.ui.animated.button.transparent {
-    background-color: transparent;
-}
-
-.ui.animated.button.transparent:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.header-buttons-left {
-    margin-top: 10px;
-    margin-left: 30px;
-}
-
-.header-logo {  
-    width: 140px;
-    height: 140px;
-    margin-top: -45px;
+.header-logo {
+    width: 120px;
+    height: 120px;
     margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: -60px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.header-text-color {
-    color: black;
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-right-buttons {
+    margin-right: 300px;
+    display: flex;
+}
+
+.header-left-buttons {
+    display: flex;
+    margin-left: 20px;
+}
+
+.signup-button {
+    color: aliceblue;
 }
 
 .sahel-font {
