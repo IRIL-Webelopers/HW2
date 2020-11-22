@@ -52,8 +52,8 @@ header {
     margin-left: 20px;
 }
 
-.signup-button {
-    color: aliceblue;
+.ui.animated.button.transparent {
+    background-color: transparent;
 }
 
 .sahel-font {
