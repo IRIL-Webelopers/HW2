@@ -73,6 +73,11 @@ footer {
     background-color: rgb(0, 68, 102) !important;
 }
 
+.ui.menu::after {
+    content: "" !important;
+    display: none;
+}
+
 body.pushable {
     background-color: rgb(0, 68, 102) !important;
 }
