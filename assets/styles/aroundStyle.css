@@ -9,6 +9,10 @@ header {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.around-text-color {
+    color: #1D6DA7 !important;
+}
+
 footer {
     position: fixed;
     background-color: rgb(204, 217, 255);
@@ -76,6 +80,10 @@ footer {
 .ui.menu::after {
     content: "" !important;
     display: none;
+}
+
+.ui.secondary.pointing.menu .active.item {
+    border-color: #186AA5;
 }
 
 body.pushable {
