@@ -12,6 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <link href="assets/styles/aroundStyle.css" rel="stylesheet">
+<link href="assets/styles/staticStyle.css" rel="stylesheet">
 
 <script>
     $("#sidebar-button").click(function () {
@@ -49,9 +50,11 @@
     <!-- Mobile Mode Version -->
     <div class="mobile-mode header-mobile-mode">
         <img alt="WebDev Logo" class="header-logo" src="./static/blue_logo_200x200.png">
-        <button class="ui icon button transparent bars-button" id="sidebar-button">
-            <i class="bars icon"></i>
-        </button>
+        <div class="button-bars">
+            <button class="ui icon button transparent" id="sidebar-button">
+                <i class="bars icon"></i>
+            </button>
+        </div>
     </div>
 </header>
 </html>

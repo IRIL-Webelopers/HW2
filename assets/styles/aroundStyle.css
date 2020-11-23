@@ -1,29 +1,7 @@
-@font-face {
-    font-family: Sahel;
-    src: url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot');
-    src: url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.woff') format('woff'),
-         url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.ttf') format('truetype');
-    font-weight: normal;
-}
-
 @media (max-width: 600px) {
-    .desktop-mode {
-        display: none !important;
-    }
     header {
         height: 80px;
     }
-}
-
-@media (min-width: 601px) {
-    .mobile-mode {
-        display: none !important;
-    }
-}
-
-body {
-    direction: rtl;
 }
 
 header {
@@ -50,9 +28,9 @@ footer {
     justify-content: space-between;
 }
 
-.bars-button {
-    margin-left: 10px;
-    margin-top: 40px;
+.button-bars {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .header-logo {
@@ -121,10 +99,6 @@ body.pushable {
 
 .sidebar-content-dark-mode-toggle-input {
     width: 5px;
-}
-
-.sahel-font {
-    font-family: Sahel, serif;
 }
 
 
