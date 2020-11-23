@@ -1,0 +1,206 @@
+:root {
+    --table-header-bg: #186AA5;
+    --table-header-border: #5190BD;
+    --table-header-text: #FFFFFF;
+    --table-odd-rows: #E8EFF7;
+    --table-even-rows: #FFFFFF;
+    --table-cell-border: #F1F7F8;
+    --table-cell-text: ##186AA5;
+
+    --card-bg: #E8EFF7;
+    --card-cell-text: #71A2C8;
+    --card-header-text: #1D6DA7;
+
+    --btn-color: #186AA5;
+    --btn-hover-color: #E8EFF7;
+
+    --data-div-bg: #FFFFFF;
+}
+
+[data-theme="dark"] {
+    --table-header-bg: #012c3d;
+    --table-header-border: #5a5a5a;
+    --table-header-text: #A0A0A0;
+    --table-odd-rows: #121212;
+    --table-even-rows: #292929;
+    --table-cell-border: #2d4042;
+    --table-cell-text: #A0A0A0;
+
+    --card-bg: #121212;
+    --card-cell-text: #A0A0A0;
+    --card-header-text: #7f888d;
+
+    --btn-color: #227bbb;
+    --btn-hover-color: #E8EFF7;
+
+    --data-div-bg: #161c22;
+}
+
+.data-table th{
+    background-color: var(--table-header-bg);
+    border: 1px solid var(--table-header-border);
+    text-align: center;
+    color: var(--table-header-text);
+}
+
+.data-table tr:nth-child(odd){
+    background-color: var(--table-odd-rows);
+}
+
+.data-table tr:nth-child(even){
+    background-color: var(--table-even-rows);
+}
+
+.data-table {
+    border-collapse: collapse;
+    border: 1px solid;
+    width: 100%;
+}
+
+.data-table td {
+    /* width: 25%; */
+    text-align: center;
+    border: 1px solid var(--table-cell-border);
+    color: var(--table-cell-text);
+}
+
+@media screen and (max-width:600px) {
+	table.mobile-optimised {
+        border: 0px;
+		word-wrap:break-word;
+	}
+	table.mobile-optimised thead {
+		display:none
+    }
+    
+    table.mobile-optimised tr:nth-child(odd){
+        background-color: var(--card-bg);
+    }
+    table.mobile-optimised tr:nth-child(even){
+        background-color: var(--card-bg);
+    }
+
+	table.mobile-optimised td {
+        /* display:block; */
+        position: relative;
+        text-align: left;
+		float:left;/* ie9 and under hack */
+		width:100%;
+        clear:both;
+        border: 0px;
+		background: transparent;
+        padding:10px 5px;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        color: var(--card-cell-text);
+	}
+	table.mobile-optimised tbody, table.mobile-optimised tr {
+		display:block
+	}
+	.mobile-optimised td:before {
+        content:attr(data-th);
+		font-weight:bold;
+        position: relative;
+        float: right;
+		color: var(--card-header-text);
+	}
+	.mobile-optimised tbody tr {
+		float:left;width:100%;
+        margin: 20px 0px 20px 0px;
+        padding: 0px 15px 0px 15px;
+	}
+}
+
+.data-div{
+    margin: 20px;
+    background-color: var(--data-div-bg);
+}
+
+.btn.btn-outline-primary.data-btn{
+    color: var(--btn-color);
+    border-color: var(--btn-color);
+    border-radius: 0px;
+}
+
+.btn.btn-outline-primary.data-btn:hover{
+    background-color: var(--btn-hover-color);
+}
+
+#next-btn{
+    position: relative;
+    float: left;
+}
+
+#previous-btn{
+    position: relative;
+    float:right;
+}
+
+/*--------------------DARKMODE SWITCH START-------------------- */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.switch-div{
+    margin: 20px 0px 20px 0px
+}
+
+/*--------------------DARKMODE SWITCH END-------------------- */
