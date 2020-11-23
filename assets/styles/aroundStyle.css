@@ -28,7 +28,7 @@ footer {
     justify-content: space-between;
 }
 
-.button-bars {
+.bars-button {
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -43,7 +43,9 @@ footer {
 
 .header-buttons {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
 
 .header-right-buttons {
@@ -53,6 +55,7 @@ footer {
 
 .header-left-buttons {
     display: flex;
+    flex-direction: row;
     margin-left: 20px;
     margin-right: 20px;
 }
