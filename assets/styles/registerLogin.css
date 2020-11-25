@@ -1,0 +1,76 @@
+@media (max-width: 600px) {
+    .desktop-mode {
+        display: none !important;
+    }
+}
+
+@media (min-width: 601px) {
+    .mobile-mode {
+        display: none !important;
+    }
+}
+
+body {
+    background-color:  rgb(204, 217, 255);
+    direction: rtl;
+}
+
+.header-logo {
+    width: 120px;
+    height: 120px;
+    margin: -20px 30px 0px 0px;
+}
+
+.ui.animated.button.transparent {
+    background-color: transparent;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ui.form.show{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+}
+
+.width300{
+    width: 300px;
+}
+
+.ui.checkbox.dir{
+    direction: rtl;
+}
+
+.ui.tabular.menu .item{
+    width: 150px;
+    padding: auto;
+}
+
+.ui.checkbox .box:before, .ui.checkbox label:before {
+    right: 0;
+    left: auto;
+ }
+ .ui.checkbox .box:after, .ui.checkbox label:after {
+    right: 0;
+    left: auto;
+ }
+.ui.checkbox .box, .ui.checkbox label {
+   padding-left: 0;
+   padding-right: 1.8em;
+}
+
+.mobile-align{
+    display: flex;
+    justify-content: center;
+}
+.register-form{
+    margin-right: 30px;
+}
+.register-photo{
+    margin-left: 30px;
+    height: 370px;
+}
