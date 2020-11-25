@@ -1,0 +1,15 @@
+.ui.grid.my-grid {
+    padding-right: 300px;
+    padding-left: 40px;
+    padding-top: 120px;
+}
+
+@media (max-width: 600px) {
+    .ui.grid.my-grid {
+        padding-right: 40px;
+    }
+}
+
+.ui.grid.my-grid .header {
+    font-family: Sahel, serif !important;;
+}
