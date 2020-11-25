@@ -1,7 +1,7 @@
 .ui.grid.my-grid {
     padding-right: 300px;
     padding-left: 40px;
-    padding-top: 120px;
+    padding-top: 30px;
 }
 
 @media (max-width: 600px) {
