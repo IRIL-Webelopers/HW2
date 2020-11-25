@@ -11,7 +11,28 @@
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <link rel="stylesheet" href="assets/styles/registerLogin.css">
 <link rel="stylesheet" href="assets/styles/staticStyle.css">
-
+<script>
+  function registerxx() {
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("pass").value;
+    var repass = document.getElementById("repass").value;
+    var check = document.getElementById("accept-rules").checked;
+    var errorBox = document.getElementById("error-box");
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var error = false;
+    if(pass == "" || email == "" || check == false || pass != repass || !email.match(mailformat)){
+      error = true;
+    } 
+    errorBox.removeChild(errorBox.firstChild);
+    if(error){
+      var errormessage = document.createElement("div");
+      errormessage.className = "ui compact message";
+      errormessage.innerText = "error!!!";
+      errormessage.style = "width : 270px;"
+      errorBox.append(errormessage);
+    }
+  }
+</script>
 <body>
   <div class="header">
     <img src="./static/blue_logo_200x200.png" alt="WebDev Logo" class="header-logo">
@@ -24,9 +45,9 @@
       </a>
     </div>
   </div>
-  <!-- Desktop version -->
-  <div class="desktop-mode" style="display: flex; justify-content: center;">
-    <div class="register-form">
+  <!-- rest of the page -->
+  <div style="display: flex; justify-content: center;">
+    <div>
       <div class="ui top attached tabular menu" style="width: 300px;">
         <a class="item active sahel-font" style="text-align: center;">
           ثبت نام
@@ -38,13 +59,13 @@
       <div class="ui bottom attached segment" style="width: 300px;">
         <form class="ui form show sahel-font">
           <div class=" field">
-            <input type="email" name="email" placeholder="ایمیل">
+            <input id="email" type="email" placeholder="ایمیل">
           </div>
           <div class="field">
-            <input type="password" name="password" placeholder="رمز عبور">
+            <input id="pass" type="password" placeholder="رمز عبور">
           </div>
           <div class="field">
-            <input type="password" name="re-password" placeholder="تکرار رمز عبور">
+            <input id="repass" type="password" placeholder="تکرار رمز عبور">
           </div>
           <div class="field">
             <div class="ui checkbox">
@@ -52,49 +73,19 @@
               <label for="accept-rules">قوانین و شرایط را می‌پذیرم</label>
             </div>
           </div>
-          <button class="ui button" type="submit">ثبت نام</button>
+          <input type="button" class="ui button" value="ثبت نام" onclick="registerxx()" style="margin-bottom: 5px;">
+          <!-- <button onclick="registerxx()" class="ui button">ثبت نام</button> -->
+          <div id="error-box">
+          </div>
         </form>
       </div>
     </div>
-    <div class="register-photo">
+    <div class="desktop-mode register-photo">
       <picture>
         <source media="(min-width: 1000px)" srcset="static/images/signup-highQ-light.jpg">
         <img height="100%" src="static/images/signup-lowQ-light.jpg"
           alt="signup-pic" style="width: auto;">
       </picture>
-    </div>
-  </div>
-  <!-- Mobile version -->
-  <div class="mobile-mode mobile-align">
-    <div>
-      <div class="ui top attached tabular menu" style="width: 300px;">
-        <a class="item custom active sahel-font">
-          ثبت نام
-        </a>
-        <a class="item custom sahel-font" style="background-color: rgb(189, 205, 255);">
-          ورود
-        </a>
-      </div>
-      <div class="ui bottom attached segment" style="width: 300px;">
-        <form class="ui form show sahel-font">
-          <div class=" field">
-            <input type="email" name="email" placeholder="ایمیل">
-          </div>
-          <div class="field">
-            <input type="password" name="password" placeholder="رمز عبور">
-          </div>
-          <div class="field">
-            <input type="password" name="re-password" placeholder="تکرار رمز عبور">
-          </div>
-          <div class="field">
-            <div class="ui checkbox">
-              <input id="accept-rules" type="checkbox" name="accept-rules" tabindex="0">
-              <label for="accept-rules">قوانین و شرایط را می‌پذیرم</label>
-            </div>
-          </div>
-          <button class="ui button" type="submit">ثبت نام</button>
-        </form>
-      </div>
     </div>
   </div>
 </body>

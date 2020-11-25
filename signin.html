@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Language" content="fa">
+  <title></title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<link rel="stylesheet" href="assets/styles/registerLogin.css">
+<link rel="stylesheet" href="assets/styles/staticStyle.css">
+<script>
+  function registerxx() {
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("pass").value;
+    var errorBox = document.getElementById("error-box");
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var error = false;
+    if(pass == "" || email == "" || !email.match(mailformat)){
+      error = true;
+    } 
+    errorBox.removeChild(errorBox.firstChild);
+    if(error){
+      var errormessage = document.createElement("div");
+      errormessage.className = "ui compact message";
+      errormessage.innerText = "error!!!";
+      errormessage.style = "width : 270px;"
+      errorBox.append(errormessage);
+    }
+  }
+</script>
+<body>
+  <div class="header">
+    <img src="./static/blue_logo_200x200.png" alt="WebDev Logo" class="header-logo">
+    <div class="ui animated button transparent" style="margin: 25px 0px 0px 10px;" tabindex="0">
+      <div class="visible content sahel-font">بازگشت به خانه ></div>
+      <a href="index.html">
+        <div class="hidden content" style="margin-top: -27px;">
+          <i class="home icon"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- rest of the page -->
+  <div style="display: flex; justify-content: center;">
+    <div>
+      <div class="ui top attached tabular menu" style="width: 300px;">
+        <a class="item sahel-font" href="register.html" style="background-color: rgb(189, 205, 255);">
+          ثبت نام
+        </a>
+        <a class="item active sahel-font">
+          ورود
+        </a>
+      </div>
+      <div class="ui bottom attached segment" style="width: 300px;">
+        <form class="ui form show sahel-font">
+          <div class=" field">
+            <input id="email" type="email" placeholder="ایمیل">
+          </div>
+          <div class="field">
+            <input id="pass" type="password" placeholder="رمز عبور">
+          </div>
+          <input type="button" class="ui button" value="ورود" onclick="registerxx()" style="margin-bottom: 5px;">
+          <!-- <button onclick="registerxx()" class="ui button">ثبت نام</button> -->
+          <div id="error-box">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="desktop-mode register-photo">
+      <picture>
+        <source media="(min-width: 1000px)" srcset="static/images/signup-highQ-dark.jpg">
+        <img height="100%" src="static/images/signup-lowQ-dark.jpg"
+          alt="signup-pic" style="width: auto;">
+      </picture>
+    </div>
+  </div>
+</body>
